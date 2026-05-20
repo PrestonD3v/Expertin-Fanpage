@@ -1,0 +1,244 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.results-wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.results-note {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 64px;
+  color: #666;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.results-card {
+  background: #ffffff;
+  border: 2px solid #f2f2f2;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.results-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.results-sub {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.results-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.results-card li {
+  padding: 6px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 15px;
+}
+
+.results-other {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #777;
+  font-weight: 500;
+}
+
+.top100-button{
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.top100-button-active {
+    background: #F66E06;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(246, 110, 6, 0.25);
+}
+
+.top100-button-active:hover {
+    background: #db6107;
+    transform: translateY(-1px);    
+    color: #ff00ff;
+}
+
+@media (max-width: 768px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.top100-countdown-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+
+  .top100-countdown-box {
+    width: 100%;
+    max-width: 1000px;
+    background: linear-gradient(135deg, #fff7f1 0%, #ffffff 100%);
+    border: 2px solid #F66E06;
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+  }
+
+  .top100-badge {
+    display: inline-block;
+    background: #F66E06;
+    color: #ffffff;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+
+  .top100-countdown-box h2 {
+    margin: 0 0 12px 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 34px;
+    line-height: 1.2;
+    color: #222222;
+    font-weight: 700;
+  }
+
+  .top100-text {
+    margin: 0 auto 26px auto;
+    max-width: 760px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444444;
+  }
+
+  .top100-countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 10px;
+  }
+
+  .top100-unit {
+    background: #ffffff;
+    border: 2px solid #f2f2f2;
+    border-radius: 18px;
+    padding: 22px 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  }
+
+  .top100-unit span {
+    display: block;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 42px;
+    line-height: 1;
+    font-weight: 700;
+    color: #F66E06;
+    margin-bottom: 8px;
+  }
+
+  .top100-unit small {
+    display: block;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    color: #666666;
+    font-weight: 600;
+  }
+
+  .top100-footer {
+    margin-top: 24px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    color: #555555;
+    font-weight: 500;
+  }
+
+  .top100-button-wrap {
+    margin-top: 22px;
+  }
+
+  .top100-button {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  .top100-button-disabled {
+    background: #e9e9e9;
+    color: #888888;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .top100-button-active {
+    background: #F66E06;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(246,110,6,0.25);
+  }
+
+  .top100-button-active:hover {
+    background: #db6107;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 767px) {
+    .top100-countdown-box {
+      padding: 24px 16px;
+    }
+
+    .top100-countdown-box h2 {
+      font-size: 26px;
+    }
+
+    .top100-text {
+      font-size: 16px;
+    }
+
+    .top100-countdown {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .top100-unit span {
+      font-size: 34px;
+    }
+
+    .top100-button {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
