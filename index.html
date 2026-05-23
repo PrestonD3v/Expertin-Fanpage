@@ -71,11 +71,33 @@
     <p style="text-align: center; font-size: 36px;">Κάνω μια <strong>έρευνα</strong> επειδή έβαλα στοίχημα με ένα παιδί.. Παρακαλώ απαντήστε:</p>
 
     <div class="iframes">
-      <img
+      <img 
+        id="liveChart"
         src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTQbrAAe8jSHG-4yvoFDAulLBGxpVQEbFLyYa_hQzjdDtkDWdyP9o6ZouTq5DJWlk-8iJQdzFJ2tUon/pubchart?oid=1913708942&format=image"
         alt="Chart"
-        style="display: block; margin: 0 auto 20px auto; max-width: 100%;"
-      >
+        style="display: block; margin: 0 auto 8px auto; max-width: 100%;">
+
+      <p id="chartTimer" style="text-align: center; font-size: 14px; color: #888; margin: 0 0 20px 0;">
+        Φόρτωση…
+      </p>
+
+      <script>
+        const chartBase = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTQbrAAe8jSHG-4yvoFDAulLBGxpVQEbFLyYa_hQzjdDtkDWdyP9o6ZouTq5DJWlk-8iJQdzFJ2tUon/pubchart?oid=1913708942&format=image";
+        const timerEl = document.getElementById("chartTimer");
+        const intervalSec = 30;
+        let remaining = intervalSec;
+
+        setInterval(() => {
+          remaining--;
+          if (remaining <= 0) {
+            document.getElementById("liveChart").src = chartBase + "&cache=" + Date.now();
+            remaining = intervalSec;
+            timerEl.textContent = "Ανανέωση σε " + remaining + " δευτερόλεπτα";
+          } else {
+            timerEl.textContent = "Ανανέωση σε " + remaining + " δευτερόλεπτα";
+          } 
+        }, 1000);
+      </script>
 
       <iframe 
         width="100%" 
